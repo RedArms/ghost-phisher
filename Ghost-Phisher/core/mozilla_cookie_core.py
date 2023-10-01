@@ -62,7 +62,7 @@ class Mozilla_Cookie_Core(object):
         mozilla_cursor = mozilla_cookie_db.cursor()
         try:
             mozilla_cursor.execute(sql_statement)
-        except Exception,e:
+        except Exception:
             mozilla_cursor.close()
             os.remove(self.cookie_database)
             self._create_moz_cookies()
